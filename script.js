@@ -35,3 +35,11 @@ function calcularResumo() {
     localStorage.setItem('resumo', resumo);
     window.location.href = 'resumo.html';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var resumo = localStorage.getItem('resumo');
+
+    if (resumo) {
+        document.getElementById('resumo').textContent = resumo;
+    }
+});
